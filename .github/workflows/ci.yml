@@ -1,3 +1,25 @@
 name: deploy go app
-on:
-job: 
+on: 
+  push:
+    branches: [ "development" ]
+  pull_request: 
+    branches: ["development" ]
+jobs: 
+  build-app:
+    runs-on: ubuntu-latest
+    steps: 
+    - uses: actions/checkout@master
+    - uses: actions/setup-go@v3
+    - run: go version
+    - name: Go build
+      run: go build main.go
+    - name: go test
+      run: go test -v       
+###TODO: setup aws s3 deployment for private
+
+  deploy-app:
+    runs-on: ubuntu-latest
+    steps: 
+    - uses: 
+    
+  
