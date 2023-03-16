@@ -31,6 +31,6 @@ jobs:
             name: go-app
         - name: Deploy to staging environment
           run: |
-            # Add commands to deploy to staging environment
+          
 
 
