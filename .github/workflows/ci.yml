@@ -1,9 +1,9 @@
 name: deploy go app
 on: 
   push:
-    branches: [ "development" ]
+    branches: [ development ]
   pull_request: 
-    branches: ["development" ]
+    branches: [ development ]
 jobs: 
   build-app:
     runs-on: ubuntu-latest
